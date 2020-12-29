@@ -9,8 +9,14 @@ export default class createRegiterTable1609260550710
                 columns: [
                     {
                         name: 'id',
-                        type: 'integer',
+                        type: 'uuid',
                         isPrimary: true,
+                        generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()',
+                    },
+                    {
+                        name: 'entityId',
+                        type: 'integer',
                     },
                     {
                         name: 'registerTimes',
